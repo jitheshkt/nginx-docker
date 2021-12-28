@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  web:
+   image: nginx
+   container_name: nginx
+   volumes:
+    - ./default.conf:/etc/nginx/conf.d/deafult.conf
+    - ./ssl:/etc/nginx/certs/
+   ports:
+    - 80:80
+    - 443:443
